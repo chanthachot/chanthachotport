@@ -2,12 +2,59 @@
 <html lang="en-US">
 
 <!-- header -->
-<?php include 'header.php'?>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chanthachot Portfolio</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap">
+    <link href="css/font-awesome/css/all.min.css?ver=1.2.1" rel="stylesheet">
+    <link href="css/mdb.min.css?ver=1.2.1" rel="stylesheet">
+    <link href="css/aos.css?ver=1.2.1" rel="stylesheet">
+    <link href="css/main.css?ver=1.2.1" rel="stylesheet">
+    <noscript>
+        <style type="text/css">
+        [data-aos] {
+            opacity: 1 !important;
+            transform: translate(0) scale(1) !important;
+        }
+        </style>
+    </noscript>
+    <style>
+    /* font */
+    *:not(i) {
+        font-family: 'Kanit', sans-serif;
+    }
+    </style>
+</head>
 
 <body class="bg-light" id="top">
 
     <!-- navbar -->
-    <?php include 'navbar.php'?>
+    <header class="d-print-none">
+        <div class="container text-center text-lg-left">
+            <div class="pt-4 clearfix">
+                <h1 class="site-title mb-0">Chanthachot Portfolio</h1>
+                <div class="site-nav">
+                    <nav role="navigation">
+                        <ul class="nav justify-content-center">
+                            <li class="nav-item"><a class="nav-link" href="#about" title="About"><span
+                                        class="menu-title">เกี่ยวกับฉัน</span></a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#education" title="Education"><span
+                                        class="menu-title">ประวัติการศึกษา</span></a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#portfolio" title="Portfolio"><span
+                                        class="menu-title">Portfolio</span></a>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
 
     <!-- content -->
     <div class="page-content">
@@ -21,7 +68,7 @@
                             <div class="mask" style="background-color: rgba(0, 0, 0, 0.7);backdrop-filter: blur(2px);">
                                 <div class="text-center p-5">
                                     <div class="avatar p-1"><img class="img-thumbnail shadow-2-strong"
-                                            src="images/avatar.jpg" width="160" height="160" /></div>
+                                            src="images/avatar.jpg" width="200" height="200" /></div>
                                     <div class="header-bio mt-3">
                                         <div data-aos="zoom-in" data-aos-delay="0">
                                             <h2 class="h1">จันทโชติ ธรรมสาร</h2>
@@ -120,7 +167,8 @@
                             <div class="timeline-card timeline-card-success" data-aos="fade-in" data-aos-delay="0">
                                 <div class="timeline-head px-4 pt-3">
                                     <div class="h5">วิทยาศาสตรบัณฑิต หลักสูตรเทคโนโลยีสารสนเทศ
-                                        สาขาวิชาวิทยาการคอมพิวเตอร์ <span class="text-muted h6">มหาวิทยาลัยขอนแก่น จ.ขอนแก่น</span>
+                                        สาขาวิชาวิทยาการคอมพิวเตอร์ <span class="text-muted h6">มหาวิทยาลัยขอนแก่น
+                                            จ.ขอนแก่น</span>
                                     </div>
                                 </div>
                                 <div class="timeline-body px-4 pb-4">
@@ -136,7 +184,8 @@
                             <div class="timeline-card timeline-card-success" data-aos="fade-in" data-aos-delay="200">
                                 <div class="timeline-head px-4 pt-3">
                                     <div class="h5">โครงการพิเศษ วิทย์-คณิต <span
-                                            class="text-muted h6">โรงเรียนอัสสัมชัญอุบลราชธานี จ.อุบลราชธานี</span> </div>
+                                            class="text-muted h6">โรงเรียนอัสสัมชัญอุบลราชธานี จ.อุบลราชธานี</span>
+                                    </div>
                                 </div>
                                 <div class="timeline-body px-4 pb-4">
                                     <div class="text-muted text-small mb-3">2554 - 2560</div>
@@ -205,8 +254,34 @@
     </div>
 
     <!-- footer -->
-    <?php include 'footer.php'?>
+    <footer class="pt-4 pb-4 text-muted text-center d-print-none">
+        <div class="container">
+            <div class="my-3">
+                <div class="h4">ChHanthachot Portfolio</div>
+                <div class="footer-nav">
+                    <nav role="navigation">
+                        <ul class="nav justify-content-center">
 
+                            <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/5lauGh7er/"
+                                    title="Facebook" target='_blank'><i class="fab fa-facebook"></i><span
+                                        class="menu-title sr-only">Facebook</span></a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="https://github.com/chanthachot"
+                                    title="Github" target='_blank'><i class="fab fa-github"></i><span
+                                        class="menu-title sr-only">Github</span></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="text-small">
+                <div class="mb-1">&copy; Material Resume. All rights reserved.</div>
+                <div>Design - <a href="https://templateflip.com/" target="_blank">TemplateFlip</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- script -->
     <script src="scripts/mdb.min.js?ver=1.2.1"></script>
     <script src="scripts/aos.js?ver=1.2.1"></script>
     <script src="scripts/main.js?ver=1.2.1"></script>
