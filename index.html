@@ -13,19 +13,62 @@
     <link href="css/mdb.min.css?ver=1.2.1" rel="stylesheet">
     <link href="css/aos.css?ver=1.2.1" rel="stylesheet">
     <link href="css/main.css?ver=1.2.1" rel="stylesheet">
-    <noscript>
+    <link rel="stylesheet" href="https://i.icomoon.io/public/temp/143ed3bed3/UntitledProject/style.css"> <noscript>
         <style type="text/css">
-        [data-aos] {
-            opacity: 1 !important;
-            transform: translate(0) scale(1) !important;
-        }
+            [data-aos] {
+                opacity: 1 !important;
+                transform: translate(0) scale(1) !important;
+            }
         </style>
     </noscript>
     <style>
-    /* font */
-    *:not(i) {
-        font-family: 'Kanit', sans-serif;
-    }
+        /* font */
+        *:not(i) {
+            font-family: 'Kanit', sans-serif;
+        }
+
+        .gototop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            -webkit-transition: 0.5s;
+            -o-transition: 0.5s;
+            transition: 0.5s;
+        }
+
+        .gototop.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .gototop a {
+            width: 50px;
+            height: 50px;
+            display: table;
+            background: black;
+            color: #fff;
+            text-align: center;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            border-radius: 50%;
+        }
+
+        .gototop a i {
+            height: 50px;
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .gototop a:hover,
+        .gototop a:active,
+        .gototop a:focus {
+            text-decoration: none;
+            outline: none;
+        }
     </style>
 </head>
 
@@ -93,10 +136,10 @@
                                         </div>
                                         <div class="d-print-none">
                                             <a class="btn btn-outline-light btn-lg shadow-sm mt-1 me-3"
-                                                href="pdf/resume.pdf" data-aos="fade-right"
+                                                href="pdf/resume.pdf" target='_blank' data-aos="fade-right"
                                                 data-aos-delay="700">Download Resume</a>
                                             <a class="btn btn-outline-light btn-lg shadow-sm mt-1"
-                                                href="pdf/certificate.pdf" data-aos="fade-left"
+                                                href="pdf/certificate.pdf" target='_blank' data-aos="fade-left"
                                                 data-aos-delay="700">Download Certificate</a>
                                         </div>
                                     </div>
@@ -206,42 +249,100 @@
                     <div class="portfolio-section">
                         <h2 class="h2 fw-light mb-4">Portfolio</h2>
                         <div class="row g-0">
-                            <div class="col-md-6"><a href="https://dribbble.com/" target="_blank"><img class="img-fluid"
-                                        src="images/project-1.jpg" width="800" height="500" /></a></div>
+                            <div class="col-md-6"><img class="img-fluid" src="images/project/webapp1.png"
+                                    onclick="img_box(this)" width="800" height="500" /></div>
+
                             <div class="col-md-6 d-flex align-items-center" data-aos="fade-left" data-aos-delay="100">
                                 <div class="m-4 mt-md-2">
-                                    <p class="text-teal text-small">Frontend / HTML / CSS / JavaScript</p>
-                                    <h3>Photo Agency Website</h3>
-                                    <p class="text-muted">Built highly performant website front end for a Photography
-                                        agency. Delivered codebase in HTML, CSS and modern JavaScript.</p>
+                                    <p class="text-teal text-small">Frontend / HTML / CSS / JavaScript / MySQL</p>
+                                    <h3>มินิโปรเจค เว็บไซต์และเว็บบอร์ดมหาวิทยาลัยขอนแก่น</h3>
+                                    <p class="text-muted">
+                                        เว็บไซต์และเว็บบอร์ดมหาวิทยาลัยขอนแก่น
+                                        คือเว็บที่รวบรวมข้อมูลข่าวสารภายในมหาวิทยาลัยขอนแก่น
+                                        และเว็บบอร์ดที่สามารถตั้งคำถามและตอบคำถามได้</p>
                                 </div>
                             </div>
                         </div>
                         <div class="row g-0 portfolio-reverse">
                             <div class="col-md-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
                                 <div class="m-4 mt-md-2 text-end">
-                                    <p class="text-teal text-small">Graphic Design / Photoshop / Sketch</p>
-                                    <h3>Restaurant Website Design</h3>
-                                    <p class="text-muted">Web design for popular resturant chain involving complex
-                                        layouts done in both Photoshop and Sketch. Collaborated with back-end and
-                                        front-end team for finished product.</p>
+                                    <p class="text-teal text-small">Frontend / HTML / CSS / JavaScript / MySQL</p>
+                                    <h3>มินิโปรเจค เว็บไซต์และเว็บบอร์ดมหาวิทยาลัยขอนแก่น</h3>
+                                    <p class="text-muted">
+                                        เว็บไซต์และเว็บบอร์ดมหาวิทยาลัยขอนแก่น
+                                        คือเว็บที่รวบรวมข้อมูลข่าวสารภายในมหาวิทยาลัยขอนแก่น
+                                        และเว็บบอร์ดที่สามารถตั้งคำถามและตอบคำถามได้</p>
                                 </div>
                             </div>
-                            <div class="col-md-6"><a href="https://www.behance.net/" target="_blank"><img
-                                        class="img-fluid" src="images/project-2.jpg" width="800" height="500" /></a>
+                            <div class="col-md-6"><img class="img-fluid" src="images/project/webapp2.png"
+                                    onclick="img_box(this)" width="800" height="500" />
                             </div>
                         </div>
                         <div class="row g-0">
-                            <div class="col-md-6"><a href="https://dribbble.com/" target="_blank"><img class="img-fluid"
-                                        src="images/project-3.jpg" width="800" height="500" /></a></div>
+                            <div class="col-md-6"><img class="img-fluid" src="images/project/se.png"
+                                    onclick="img_box(this)" width="800" height="500" /></div>
                             <div class="col-md-6 d-flex align-items-center" data-aos="fade-left" data-aos-delay="100">
                                 <div class="m-4 mt-md-2">
-                                    <p class="text-teal text-small">Frontend / HTML / CSS / JavaScript</p>
-                                    <h3>E-Commerce Website</h3>
-                                    <p class="text-muted">Built highly performant website for an E-commerce Portal.
-                                        Worked with back-end team to timely deliver codebase in HTML, CSS and modern
-                                        JavaScript.</p>
+                                    <p class="text-teal text-small">Frontend / HTML / PHP / CSS / JavaScript / MySQL</p>
+                                    <h3>มินิโปรเจค เว็บไซต์ระบบจองเวลาผู้บริหาร</h3>
+                                    <p class="text-muted">เว็บไซต์ระบบจองเวลาผู้บริหาร
+                                        คือเว็บไซต์จัดเวลาการจองผู้บริหารเพื่อให้ผู้ใช้งานเข้ามาจองได้ในกรณีที่ต้องการให้ผู้บริหารเข้าร่วมงาน
+                                        เช่น จองเวลาให้ผู้บริหารเข้าร่วมงานแต่งงาน ไปเปิดงานเทศกาลต่างๆ
+                                    </p>
+
+                                    <a href="#" target="_blank"><i class="fab fa-github"></i> Github</a>
+
                                 </div>
+                            </div>
+                        </div>
+                        <div class="row g-0 portfolio-reverse">
+                            <div class="col-md-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
+                                <div class="m-4 mt-md-2 text-end">
+                                    <p class="text-teal text-small">Mobile Apllication / Kotlin / MySQL</p>
+                                    <h3>มินิโปรเจค แอปพลิเคชันแลกเปลี่ยนสิ่งของ</h3>
+                                    <p class="text-muted">
+                                        แอปพลิเคชันแลกเปลี่ยนสิ่งของ
+                                        คือแอปพลิเคชันที่เพิ่มความอำนวยสะดวกแก่ผู้ใช้ที่ไม่สะดวกใช้วิธีการแลกเปลี่ยนโดยการใช้เงิน
+                                        ซึ่งใช้วิธีการแลกเปลี่ยนเป็นใช้สิ่งของแทน
+                                        โดยการนำสิ่งของมาใช้ในการแลกเปลี่ยนเป็นอีกสิ่งหนึ่งจากอีกฝ่าย</p>
+                                    <a href="#" target="_blank"><i class="fab fa-github"></i> Github</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6"><img class="img-fluid" src="images/project/mobile.png"
+                                    onclick="img_box(this)" width="260" height="260" />
+                            </div>
+                        </div>
+                        <div class="row g-0">
+                            <div class="col-md-6"><img class="img-fluid" src="images/project/senior1.png"
+                                    onclick="img_box(this)" width="800" height="500" /></div>
+                            <div class="col-md-6 d-flex align-items-center" data-aos="fade-left" data-aos-delay="100">
+                                <div class="m-4 mt-md-2">
+                                    <p class="text-teal text-small">Backend / HTML / PHP / CSS / JavaScript / MySQL</p>
+                                    <h3>โปรเจคจบ ระบบจัดการหลังบ้านสำหรับแอปพลิเคชันสำรวจนก Birds Exploring</h3>
+                                    <p class="text-muted">ระบบจัดการหลังบ้านสำหรับแอปพลิเคชันสำรวจนก
+                                        คือระบบที่ให้นักสิ่งแวดล้อมเข้าไปจัดการข้อมูลต่าง ๆ ที่แสดงในแอปพลิเคชัน เช่น
+                                        เส้นทางสำรวจนก, สร้างคิวอาร์โค้ด, ฐานข้อมูลนก, การพบนก, ข้อมูลผู้ใช้ เป็นต้น</p>
+                                    <a href="#" target="_blank"><i class="fab fa-github"></i> Github</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row g-0 portfolio-reverse">
+                            <div class="col-md-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
+                                <div class="m-4 mt-md-2 text-end">
+                                    <p class="text-teal text-small">Mobile Application / Kotlin / MySQL / Firebase</p>
+                                    <h3>โปรเจคจบ แอปพลิเคชันสำรวจนก Birds Exploring</h3>
+                                    <p class="text-muted">แอปพลิเคชันสำรวจนก
+                                        คือแอปพลิเคชันที่ให้ผู้ใช้สามารถสำรวจนกได้ด้วยการใช้กล้องโทรศัพท์สแกนคิวอาร์โค้ดเพื่อดูข้อมูลนกได้
+                                        ข้อมูลของนกที่สามารถทราบได้จากแอปพลิเคชัน เช่น ชื่อภาษาไทย, ชื่อภาษาอังกฤษ,
+                                        ชื่อวงศ์, สถานที่พบ, ลักษณะถิ่นที่อยู่ เป็นต้น
+                                        สามารถบอกสถานที่จุดชมนกได้โดย Google Map
+                                        และสามารถบันทึกสถานที่เมื่อพบนกได้
+                                    </p>
+                                    <a href="#" target="_blank"><i class="fab fa-github"></i> Github</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6"><img class="img-fluid" src="images/project/senior2.png"
+                                    onclick="img_box(this)" width="260" height="260" />
                             </div>
                         </div>
                     </div>
@@ -281,10 +382,43 @@
         </div>
     </footer>
 
+    <div class="gototop js-top">
+        <a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
+    </div>
+
     <!-- script -->
     <script src="scripts/mdb.min.js?ver=1.2.1"></script>
     <script src="scripts/aos.js?ver=1.2.1"></script>
     <script src="scripts/main.js?ver=1.2.1"></script>
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/jquery.easing.1.3.js"></script>
+    <script src="scripts/jquery.flexslider-min.js"></script>
+    <script src="scripts/img_box.js"></script>
+    <script>
+
+        $('.js-gotop').on('click', function (event) {
+
+            event.preventDefault();
+
+            $('html, body').animate({
+                scrollTop: $('html').offset().top
+            }, 500, 'easeInOutExpo');
+
+            return false;
+        });
+
+        $(window).scroll(function () {
+
+            var $win = $(window);
+            if ($win.scrollTop() > 200) {
+                $('.js-top').addClass('active');
+            } else {
+                $('.js-top').removeClass('active');
+            }
+
+        });
+
+    </script>
 </body>
 
 </html>
